@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
@@ -20,23 +21,13 @@ namespace PhoneBook
 
         private void button1_Click(object sender, EventArgs e)
         {
-          
-
             MessageBox.Show(GetInfo());
-            //MessageBox.Show(Insert().ToString());
-
-            
-         
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DataTable result = Insert();
-            MessageBox.Show(result.ToString());
-            for (int i = 0; i < result.Rows.Count; i++)
-            {
-                MessageBox.Show(result.Rows[i].ToString());
-            }
+            var result = Insert();
+            MessageBox.Show(result.ToString() + @" was successful");
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -49,37 +40,69 @@ namespace PhoneBook
 
         private String GetInfo()
         {
-            String sql = "select * from phonebook where name = '" + textBox1.Text + "'";
+            String sql = "select * from phonebook where name = @name";
             
 
-            DataTable result = DataConnection(sql);
+            DataTable result = Query(sql);
             return "Name:" + result.Rows[0]["Name"] + "    PhoneNum:" + result.Rows[0]["PhoneNum"];
         }
 
-        private DataTable Insert()
+        private int Insert()
         {
-            String sql_insert = "insert or replace into phonebook values(6, 'test4', 18000000000)";
-            DataTable result = DataConnection(sql_insert);
+            String[] sqls;
+            sqls[0] = "insert or replace into phonebook values(6, 'test4', 18000000000)";
+            var result = NonQuery(sqls);
             return result;
         }
 
-        private DataTable DataConnection(String SqlCommand)
+        private DataTable Query(String sqlCommand)
         {
-            
-            SQLiteConnection myConnection = new SQLiteConnection(@"Data Source = C:\Users\lnc\Documents\Visual Studio 2015\Projects\PhoneBook\PhoneBook.db");
+            SQLiteConnection myConnection = GetConnection();
+
             SQLiteDataAdapter ad;
             DataTable dt = new DataTable();
-            SQLiteTransaction transaction = myConnection.BeginTransaction();
-
+           
             try
             {
                 myConnection.Open();
                 SQLiteCommand sqLiteCommand = myConnection.CreateCommand();
-                sqLiteCommand.CommandText = SqlCommand;
+                sqLiteCommand.CommandText = sqlCommand;
                 sqLiteCommand.CommandTimeout = 15;
                 sqLiteCommand.CommandType = CommandType.Text;
+                sqLiteCommand.Parameters.Add(new SQLiteParameter("@name", textBox1.Text)); 
                 ad = new SQLiteDataAdapter(sqLiteCommand);
                 ad.Fill(dt);
+            }
+            catch (SQLiteException)
+            {
+                throw;
+            }
+            finally
+            {
+                myConnection.Close();
+            }
+            return dt;
+        }
+
+        private int NonQuery(String[] sqlCommands)
+        {
+            SQLiteConnection myConnection = GetConnection();
+            
+            SQLiteTransaction transaction = myConnection.BeginTransaction();
+            var count = 0;
+            try
+            {
+                myConnection.Open();
+                SQLiteCommand sqLiteCommand = myConnection.CreateCommand();
+                sqLiteCommand.Transaction = transaction;
+                sqLiteCommand.CommandTimeout = 15;
+                sqLiteCommand.CommandType = CommandType.Text;
+                foreach (var sql in sqlCommands)
+                {
+                    sqLiteCommand.CommandText = sql;
+                    count += sqLiteCommand.ExecuteNonQuery();
+                }
+                
                 transaction.Commit();
             }
             catch (SQLiteException)
@@ -91,9 +114,13 @@ namespace PhoneBook
             {
                 myConnection.Close();
             }
-            return dt;
+            return count;
         }
 
+        private SQLiteConnection GetConnection()
+        {
+            return new SQLiteConnection(@"Data Source = C:\Users\lnc\Documents\Visual Studio 2015\Projects\PhoneBook\PhoneBook.db");
+        }
     }
 }
         
