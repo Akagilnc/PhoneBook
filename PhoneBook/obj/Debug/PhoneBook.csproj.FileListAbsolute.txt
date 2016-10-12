@@ -14,4 +14,4 @@ c:\users\lnc\documents\visual studio 2015\Projects\PhoneBook\PhoneBook\obj\Debug
 c:\users\lnc\documents\visual studio 2015\Projects\PhoneBook\PhoneBook\obj\Debug\PhoneBook.csproj.GenerateResource.Cache
 c:\users\lnc\documents\visual studio 2015\Projects\PhoneBook\PhoneBook\obj\Debug\PhoneBook.exe
 c:\users\lnc\documents\visual studio 2015\Projects\PhoneBook\PhoneBook\obj\Debug\PhoneBook.pdb
-c:\users\lnc\documents\visual studio 2015\Projects\PhoneBook\PhoneBook\obj\Debug\PhoneBook.Form1.resources
+C:\Users\lnc\Documents\Visual Studio 2015\Projects\PhoneBook\PhoneBook\obj\Debug\PhoneBook.Index.resources
