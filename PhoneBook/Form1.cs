@@ -20,7 +20,7 @@ namespace PhoneBook
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SQLiteConnection myConnection = new SQLiteConnection(@"Data Source = C:\sqlite\PhoneBook.db");
+            SQLiteConnection myConnection = new SQLiteConnection(@"Data Source = C:\Users\lnc\Documents\Visual Studio 2015\Projects\PhoneBook\PhoneBook.db");
 
             SQLiteDataAdapter ad;
             DataTable dt = new DataTable();
