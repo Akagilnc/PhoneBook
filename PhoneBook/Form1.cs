@@ -30,7 +30,7 @@ namespace PhoneBook
                 SQLiteCommand sqLiteCommand;
                 myConnection.Open();
                 sqLiteCommand = myConnection.CreateCommand();
-                sqLiteCommand.CommandText = "select * from phonebook";
+                sqLiteCommand.CommandText = "select * from phonebook where name = '" + textBox1.Text + "'";
                 sqLiteCommand.CommandTimeout = 15;
                 sqLiteCommand.CommandType = CommandType.Text;
                 ad = new SQLiteDataAdapter(sqLiteCommand);
@@ -51,7 +51,8 @@ namespace PhoneBook
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            MessageBox.Show(e.ToString());
+            //MessageBox.Show(e.ToString());
+            String name = textBox1.Text;
         }
     }
 }
