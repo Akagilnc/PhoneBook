@@ -44,12 +44,20 @@ namespace PhoneBook
             
 
             DataTable result = Query(sql);
-            return "Name:" + result.Rows[0]["Name"] + "    PhoneNum:" + result.Rows[0]["PhoneNum"];
+            if (result != null && result.Rows.Count > 0)
+            {
+                return "Name:" + result.Rows[0]["Name"] + "    PhoneNum:" + result.Rows[0]["PhoneNum"];
+            }
+            else
+            {
+                return @"Nothing founded";
+            }
+            
         }
 
         private int Insert()
         {
-            String[] sqls;
+            String[] sqls = new string[1];
             sqls[0] = "insert or replace into phonebook values(6, 'test4', 18000000000)";
             var result = NonQuery(sqls);
             return result;
@@ -87,12 +95,12 @@ namespace PhoneBook
         private int NonQuery(String[] sqlCommands)
         {
             SQLiteConnection myConnection = GetConnection();
-            
+            myConnection.Open();
             SQLiteTransaction transaction = myConnection.BeginTransaction();
+
             var count = 0;
             try
             {
-                myConnection.Open();
                 SQLiteCommand sqLiteCommand = myConnection.CreateCommand();
                 sqLiteCommand.Transaction = transaction;
                 sqLiteCommand.CommandTimeout = 15;
