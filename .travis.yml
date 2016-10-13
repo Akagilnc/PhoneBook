@@ -1,0 +1,11 @@
+language: csharp
+solution: PhoneBook.sln
+mono: none
+dotnet: 1.0.0-preview2-003131
+install:
+  - sudo apt-get install -y gtk-sharp2
+  - nuget restore PhoneBook.sln
+  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+script:    # the following commands are just examples, use whatever your build process requires
+  - xbuild /p:Configuration=Release solution-name.sln
+  - mono ./testrunner/xunit.runners.1.9.2/tools/xunit.console.clr4.exe ./MyPoject.Tests/bin/Release/MyProject.Tests.dll
