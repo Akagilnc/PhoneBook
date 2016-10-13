@@ -15,3 +15,5 @@ c:\users\lnc\documents\visual studio 2015\Projects\PhoneBook\PhoneBook\obj\Debug
 c:\users\lnc\documents\visual studio 2015\Projects\PhoneBook\PhoneBook\obj\Debug\PhoneBook.exe
 c:\users\lnc\documents\visual studio 2015\Projects\PhoneBook\PhoneBook\obj\Debug\PhoneBook.pdb
 C:\Users\lnc\Documents\Visual Studio 2015\Projects\PhoneBook\PhoneBook\obj\Debug\PhoneBook.Index.resources
+C:\Users\lnc\Documents\Visual Studio 2015\Projects\PhoneBook\PhoneBook\bin\Debug\PhoneBook.exe.CodeAnalysisLog.xml
+C:\Users\lnc\Documents\Visual Studio 2015\Projects\PhoneBook\PhoneBook\bin\Debug\PhoneBook.exe.lastcodeanalysissucceeded
