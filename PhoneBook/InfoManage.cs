@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PhoneBook
 {
-    class InfoManage
+    public class InfoManage
     {
         public string GetInfo(String name)
         {

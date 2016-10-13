@@ -76,6 +76,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="IndexTests.cs" />
+    <Compile Include="InfoManageTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
