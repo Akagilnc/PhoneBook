@@ -1,6 +1,7 @@
 language: csharp
 solution: PhoneBook.sln
-mono: none
+mono:
+  - latest
 dotnet: 1.0.0-preview2-003131
 install:
   - sudo apt-get install -y gtk-sharp2
