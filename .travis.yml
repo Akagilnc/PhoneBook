@@ -3,10 +3,12 @@ solution: PhoneBook.sln
 mono:
   - latest
 dotnet: 1.0.0-preview2-003131
+before_install:  
+  - if test "$TRAVIS_OS_NAME" == "osx"; then brew update; brew install openssl; brew link --force openssl; fi
 install:
   - sudo apt-get install -y gtk-sharp2
   - nuget restore PhoneBook.sln
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script:    # the following commands are just examples, use whatever your build process requires
-  - xbuild /p:Configuration=Release solution-name.sln
-  - mono ./testrunner/xunit.runners.1.9.2/tools/xunit.console.clr4.exe ./MyPoject.Tests/bin/Release/MyProject.Tests.dll
+  - xbuild /p:Configuration=Release PhoneBook.sln
+  - ./build.sh
