@@ -28,8 +28,42 @@ namespace PhoneBook
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            //MessageBox.Show(e.ToString());
-            var name = textBox1.Text;
+            
+            
+           
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+           
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            label1.Text = "Moji";
+            label1.ForeColor = System.Drawing.Color.BlueViolet;
+
+            // Set up the delays for the ToolTip.
+            toolTip1.AutoPopDelay = 10000;
+            toolTip1.InitialDelay = 500;
+            toolTip1.ReshowDelay = 200;
+            toolTip1.BackColor = System.Drawing.Color.DarkRed;
+            toolTip1.ForeColor = System.Drawing.Color.Blue;
+            toolTip1.SetToolTip(label1, "Moji means character");
+
+        }
+        private void toolTip1_Draw(object sender, DrawToolTipEventArgs e)
+        {
+            e.DrawBackground();
+            e.DrawBorder();
+            e.DrawText();
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {       
+        }
+
+        
+
     }
 }
