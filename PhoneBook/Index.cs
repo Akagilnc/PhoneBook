@@ -47,8 +47,6 @@ namespace PhoneBook
             toolTip1.AutoPopDelay = 10000;
             toolTip1.InitialDelay = 500;
             toolTip1.ReshowDelay = 200;
-            toolTip1.ShowAlways = true;
-            toolTip1.OwnerDraw = true;
             toolTip1.BackColor = System.Drawing.Color.DarkRed;
             toolTip1.ForeColor = System.Drawing.Color.Blue;
             toolTip1.SetToolTip(label1, "Moji means character");
