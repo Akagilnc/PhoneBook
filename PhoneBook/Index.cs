@@ -31,9 +31,5 @@ namespace PhoneBook
             //MessageBox.Show(e.ToString());
             var name = textBox1.Text;
         }
-
-
-        
-
     }
 }
