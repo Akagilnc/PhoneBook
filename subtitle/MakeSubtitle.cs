@@ -34,7 +34,7 @@ namespace subtitle
 
                 if (field == null)
                 {
-                    break;
+                    continue;
                 }
 
                 string pattern = "hh:mm:ss,FFF";
