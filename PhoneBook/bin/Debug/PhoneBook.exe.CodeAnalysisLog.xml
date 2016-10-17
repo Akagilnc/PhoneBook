@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 14.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
 <FxCopReport Version="14.0">
  <Targets>
-  <Target Name="C:\Users\lnc\documents\visual studio 2015\Projects\PhoneBook\PhoneBook\bin\Debug\PhoneBook.exe">
+  <Target Name="C:\Users\Deron\Documents\Visual Studio 2015\Projects\PhoneBook\PhoneBook\bin\Debug\PhoneBook.exe">
    <Modules>
     <Module Name="phonebook.exe">
      <Namespaces>
@@ -12,15 +12,15 @@
          <Members>
           <Member Name="#NonQuery(System.String[])" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2016-10-17 06:25:43Z" FixCategory="DependsOnFix">
-             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\lnc\documents\visual studio 2015\Projects\PhoneBook\PhoneBook" File="DataTools.cs" Line="61">The query string passed to 'SQLiteCommand.CommandText.set(string)' in 'DataTools.NonQuery(string[])' could contain the following variables 'sqlCommands[...]'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2016-10-17 12:51:07Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\Deron\Documents\Visual Studio 2015\Projects\PhoneBook\PhoneBook" File="DataTools.cs" Line="61">The query string passed to 'SQLiteCommand.CommandText.set(string)' in 'DataTools.NonQuery(string[])' could contain the following variables 'sqlCommands[...]'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Query(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2016-10-17 06:25:43Z" FixCategory="DependsOnFix">
-             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\lnc\documents\visual studio 2015\Projects\PhoneBook\PhoneBook" File="DataTools.cs" Line="28">The query string passed to 'SQLiteCommand.CommandText.set(string)' in 'DataTools.Query(string, string)' could contain the following variables 'sqlCommand'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2016-10-17 12:51:07Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="C:\Users\Deron\Documents\Visual Studio 2015\Projects\PhoneBook\PhoneBook" File="DataTools.cs" Line="28">The query string passed to 'SQLiteCommand.CommandText.set(string)' in 'DataTools.Query(string, string)' could contain the following variables 'sqlCommand'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
             </Message>
            </Messages>
           </Member>

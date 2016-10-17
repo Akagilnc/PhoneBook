@@ -18,8 +18,6 @@ C:\Users\lnc\Documents\Visual Studio 2015\Projects\PhoneBook\PhoneBook\obj\Debug
 C:\Users\lnc\Documents\Visual Studio 2015\Projects\PhoneBook\PhoneBook\bin\Debug\PhoneBook.exe.CodeAnalysisLog.xml
 C:\Users\lnc\Documents\Visual Studio 2015\Projects\PhoneBook\PhoneBook\bin\Debug\PhoneBook.exe.lastcodeanalysissucceeded
 C:\Users\Deron\Documents\Visual Studio 2015\Projects\PhoneBook\PhoneBook\bin\Debug\PhoneBook.exe.config
-C:\Users\Deron\Documents\Visual Studio 2015\Projects\PhoneBook\PhoneBook\obj\Debug\PhoneBook.exe
-C:\Users\Deron\Documents\Visual Studio 2015\Projects\PhoneBook\PhoneBook\obj\Debug\PhoneBook.pdb
 C:\Users\Deron\Documents\Visual Studio 2015\Projects\PhoneBook\PhoneBook\bin\Debug\PhoneBook.exe
 C:\Users\Deron\Documents\Visual Studio 2015\Projects\PhoneBook\PhoneBook\bin\Debug\PhoneBook.pdb
 C:\Users\Deron\Documents\Visual Studio 2015\Projects\PhoneBook\PhoneBook\bin\Debug\PhoneBook.exe.CodeAnalysisLog.xml
@@ -36,3 +34,5 @@ C:\Users\Deron\Documents\Visual Studio 2015\Projects\PhoneBook\PhoneBook\obj\Deb
 C:\Users\Deron\Documents\Visual Studio 2015\Projects\PhoneBook\PhoneBook\obj\Debug\PhoneBook.Index.resources
 C:\Users\Deron\Documents\Visual Studio 2015\Projects\PhoneBook\PhoneBook\obj\Debug\PhoneBook.Properties.Resources.resources
 C:\Users\Deron\Documents\Visual Studio 2015\Projects\PhoneBook\PhoneBook\obj\Debug\PhoneBook.csproj.GenerateResource.Cache
+C:\Users\Deron\Documents\Visual Studio 2015\Projects\PhoneBook\PhoneBook\obj\Debug\PhoneBook.exe
+C:\Users\Deron\Documents\Visual Studio 2015\Projects\PhoneBook\PhoneBook\obj\Debug\PhoneBook.pdb

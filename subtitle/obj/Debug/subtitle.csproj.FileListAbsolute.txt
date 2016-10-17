@@ -8,11 +8,11 @@ C:\Users\lnc\documents\visual studio 2015\Projects\PhoneBook\subtitle\obj\Debug\
 C:\Users\lnc\documents\visual studio 2015\Projects\PhoneBook\subtitle\obj\Debug\subtitle.exe
 C:\Users\lnc\documents\visual studio 2015\Projects\PhoneBook\subtitle\obj\Debug\subtitle.pdb
 C:\Users\Deron\Documents\Visual Studio 2015\Projects\PhoneBook\subtitle\bin\Debug\subtitle.exe.config
-C:\Users\Deron\Documents\Visual Studio 2015\Projects\PhoneBook\subtitle\obj\Debug\subtitle.exe
-C:\Users\Deron\Documents\Visual Studio 2015\Projects\PhoneBook\subtitle\obj\Debug\subtitle.pdb
 C:\Users\Deron\Documents\Visual Studio 2015\Projects\PhoneBook\subtitle\bin\Debug\subtitle.exe
 C:\Users\Deron\Documents\Visual Studio 2015\Projects\PhoneBook\subtitle\bin\Debug\subtitle.pdb
 C:\Users\Deron\Documents\Visual Studio 2015\Projects\PhoneBook\subtitle\obj\Debug\subtitle.csprojResolveAssemblyReference.cache
 C:\Users\Deron\Documents\Visual Studio 2015\Projects\PhoneBook\subtitle\obj\Debug\subtitle.Form1.resources
 C:\Users\Deron\Documents\Visual Studio 2015\Projects\PhoneBook\subtitle\obj\Debug\subtitle.Properties.Resources.resources
 C:\Users\Deron\Documents\Visual Studio 2015\Projects\PhoneBook\subtitle\obj\Debug\subtitle.csproj.GenerateResource.Cache
+C:\Users\Deron\Documents\Visual Studio 2015\Projects\PhoneBook\subtitle\obj\Debug\subtitle.exe
+C:\Users\Deron\Documents\Visual Studio 2015\Projects\PhoneBook\subtitle\obj\Debug\subtitle.pdb
