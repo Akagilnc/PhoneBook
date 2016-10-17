@@ -56,8 +56,8 @@ namespace subtitle
         {
             DateTime parsedTime;
             string pattern = "hh:mm:ss,fff";
-            //DateTime.TryParseExact(time, pattern, null, DateTimeStyles.None, out parsedTime);
-            DateTime.TryParse(time, out parsedTime);
+            DateTime.TryParseExact(time, pattern, null, DateTimeStyles.None, out parsedTime);
+            //DateTime.TryParse(time, out parsedTime);
             return parsedTime;
         }
 

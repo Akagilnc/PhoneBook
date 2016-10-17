@@ -23,9 +23,9 @@ namespace subtitle
             MakeSubtitle makeSubtitle = new MakeSubtitle();
 
             Hashtable table = makeSubtitle.FileToString();
-            Key key = new Key(makeSubtitle.ParserTime("00:00:05"));
+            Key key = new Key(makeSubtitle.ParserTime("00:00:05,607"));
 
-            this.result.Text = makeSubtitle.GetValue(table, key) + AppDomain.CurrentDomain.BaseDirectory; 
+            this.result.Text = makeSubtitle.GetValue(table, key); 
         }
 
         private void result_Click(object sender, EventArgs e)
