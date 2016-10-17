@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -78,9 +79,11 @@ namespace PhoneBook
 
         private SQLiteConnection GetConnection()
         {
+            var path = Directory.GetCurrentDirectory();
+
             return
                 new SQLiteConnection(
-                    @"Data Source = C:\Users\lnc\Documents\Visual Studio 2015\Projects\PhoneBook\PhoneBook.db");
+                    @"Data Source = ..\..\..\PhoneBook.db");
         }
     }
 }
