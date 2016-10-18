@@ -77,12 +77,17 @@
   <ItemGroup>
     <Compile Include="IndexTests.cs" />
     <Compile Include="InfoManageTest.cs" />
+    <Compile Include="MakeSubtitleTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PhoneBook\PhoneBook.csproj">
       <Project>{1DD79E47-FD0C-422B-98C4-5813EE410C9A}</Project>
       <Name>PhoneBook</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\subtitle\subtitle.csproj">
+      <Project>{7DE154EA-4B6E-4A6C-B09A-92B94D5662C2}</Project>
+      <Name>subtitle</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

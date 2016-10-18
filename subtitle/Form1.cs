@@ -22,7 +22,7 @@ namespace subtitle
         {
             MakeSubtitle makeSubtitle = new MakeSubtitle();
 
-            Hashtable table = makeSubtitle.FileToString();
+            Hashtable table = makeSubtitle.FileToString(null);
             Key key = new Key(makeSubtitle.ParserTime("00:00:05,607"));
 
             this.result.Text = makeSubtitle.GetValue(table, key); 

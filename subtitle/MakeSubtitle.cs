@@ -9,13 +9,21 @@ using System.Threading.Tasks;
 
 namespace subtitle
 {
-    class MakeSubtitle
+    public class MakeSubtitle
     {
-        public Hashtable FileToString()
+        public Hashtable FileToString(string path)
         {
+            StreamReader reader;
             Hashtable table = new Hashtable();
-            
-            StreamReader reader = GetFile();
+            if (path == null || path.Equals(""))
+            {
+                reader = GetFile();
+            }
+            else
+            {
+                reader = GetFile(path);
+            }
+             
 
             while (true)
             {
@@ -50,6 +58,12 @@ namespace subtitle
             return new StreamReader(stream);
         }
 
+        private StreamReader GetFile(string path)
+        {
+            Stream stream = new FileStream(path, FileMode.Open);
+            return new StreamReader(stream);
+        }
+
         public DateTime ParserTime(String time)
         {
             DateTime parsedTime;
@@ -72,13 +86,16 @@ namespace subtitle
             //}
 
             //return "";
-
-            return table[key].ToString();
+            if (table != null && table[key] != null)
+            {
+                return table[key].ToString();
+            }
+            return "";
 
         }
     }
 
-    class Key
+    public class Key
     {
         public DateTime min;
         public DateTime max;
