@@ -36,8 +36,6 @@ namespace subtitle
                 {
                     continue;
                 }
-
-                string pattern = "hh:mm:ss,FFF";
                
                 Key key = new Key(ParserTime(field[0]), ParserTime(field[1]));
                 table.Add(key,field[2]);
@@ -64,16 +62,19 @@ namespace subtitle
 
         public string GetValue(Hashtable table, Key key)
         {
-            foreach (System.Collections.DictionaryEntry line in table)
-            {
-                Key tempKey = (Key)line.Key;
-                if (tempKey.min <= key.min && tempKey.max >= key.max)
-                {
-                    return line.Value.ToString();
-                }
-            }
+            //foreach (System.Collections.DictionaryEntry line in table)
+            //{
+            //    Key tempKey = (Key)line.Key;
+            //    if (tempKey.min <= key.min && tempKey.max >= key.max)
+            //    {
+            //        return line.Value.ToString();
+            //    }
+            //}
 
-            return "";
+            //return "";
+
+            return table[key].ToString();
+
         }
     }
 
@@ -96,16 +97,17 @@ namespace subtitle
 
         public override bool Equals(object obj)
         {
-            Key pom = (Key) obj;
+            Key pom = (Key)obj;
             if (pom.max <= max && pom.min >= min)
             {
                 return true;
             }
             else
-            {
                 return false;
-            }
-            
+        }
+        public override int GetHashCode()
+        {
+            return 1;
         }
     }
 }
